@@ -7,8 +7,8 @@ const Company = () => {
     const [companies, setCompanies] = useState([]);
 
     useEffect(() => {
-        axios.get("/company.json").then((res) => {
-            setCompanies(res.data.companies);
+        axios.get("http://localhost:5000/api/company/fetch/").then((res) => {
+            setCompanies(res.data);
         });
     }, []);
 

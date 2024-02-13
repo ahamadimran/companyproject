@@ -26,9 +26,9 @@ export default function CompanyCard(props) {
                     <span class="icon is-small">
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </span>
-                    {props.tags.map((tag, id) => (
+                    {/* {props.tags.map((tag, id) => (
                         <span> {tag} </span>
-                    ))}
+                    ))} */}
                 </div>
                 <div class="column" align="right">
                     <span class="icon is-small">

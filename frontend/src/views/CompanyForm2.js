@@ -2,6 +2,8 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Navigation from '../components/Navigation'
 import { useState } from "react";
+import axios from "axios";
+
 import FileUploadSingle from '../components/FileUpload';
 
 
@@ -14,14 +16,24 @@ export default function CompanyForm2() {
         handleSubmit,
         formState: { errors }
     } = useForm();
+
+
     const onSubmit = async (data) => {
         console.log(data);
         try {
+
             let res = await fetch("http://localhost:5000/api/company/create/", {
                 method: "POST",
                 body: JSON.stringify(data),
             });
-            let resJson = await res.json();
+
+
+            // axios.post{
+            //     "http://localhost:5000/api/company/create/",
+
+            // };
+
+            let resJson = await res.json(data);
 
             console.log(resJson);
             if (resJson.status === 200) {
@@ -49,6 +61,7 @@ export default function CompanyForm2() {
                         <div class="control">
                             <input class="input is-success"
                                 type="text"
+                                name="name"
                                 placeholder="Name"
                                 {...register("name")}
                             />
@@ -58,6 +71,7 @@ export default function CompanyForm2() {
                     <div class="field" align="left">
                         <label class="label" >Description</label>
                         <textarea class="textarea is-success"
+                        name="description"
                             placeholder="e.g. Hello world"
                             {...register("description")}
                         ></textarea>
@@ -70,7 +84,16 @@ export default function CompanyForm2() {
 
                         <div class="file is-primary">
                             <label class="file-label">
-                                <input class="file-input" type="file" name="resume" />
+
+                                {/* <input class="file-input" type="file" name="logo" /> */}
+
+                                <input class="input is-success"
+                                    type="text"
+                                    name="logo"
+                                    placeholder="Logo"
+                                    {...register("logo")}
+                                />
+
                                 <span class="file-cta">
                                     <span class="file-icon">
                                         <i class="fa fa-upload"></i>
@@ -83,18 +106,12 @@ export default function CompanyForm2() {
                         </div>
                     </div>
 
-
-                    <div class="field">
-
-                        <FileUploadSingle />
-
-                    </div>
-
                     <div class="field" align="left">
                         <label class="label">Location</label>
                         <div class="control has-icons-left">
                             <input class="input is-success"
                                 type="text"
+                                name="location"
                                 placeholder="Street, City, State"
                                 {...register("location")}
                             />
@@ -109,6 +126,7 @@ export default function CompanyForm2() {
                         <div class="control has-icons-left">
                             <input class="input is-success"
                                 type="text"
+                                name="category"
                                 placeholder="Software"
                                 {...register("category")}
                             />
