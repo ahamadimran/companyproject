@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Navigation from '../components/Navigation'
 import { useState } from "react";
-import FileUploadSingle from '../components/FileUpload';
+import FileUpload from '../components/FileUpload';
 
 
 //from https://www.freecodecamp.org/news/how-to-create-forms-in-react-using-react-hook-form/
@@ -86,7 +86,7 @@ export default function CompanyForm2() {
 
                     <div class="field">
 
-                        <FileUploadSingle />
+                        <FileUpload />
 
                     </div>
 
