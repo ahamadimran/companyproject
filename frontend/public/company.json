@@ -1,0 +1,58 @@
+{
+    "companies":[
+        {
+            "id":1,
+            "name":"CropIn",
+            "type":"B2B",
+            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
+            "tags": ["Agritech"],
+            "location": "Bangalore"
+        },
+        {
+            "id":2,
+            "name":"TopIn",
+            "type":"B2B",
+            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
+            "tags": ["Agritech"],
+            "location": "Bangalore"
+        },
+        {
+            "id":3,
+            "name":"CropIn",
+            "type":"B2B",
+            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
+            "tags": ["Agritech"],
+            "location": "Bangalore"
+        },
+        {
+            "id":4,
+            "name":"CropIn",
+            "type":"B2B",
+            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
+            "tags": ["Agritech"],
+            "location": "Bangalore"
+        },
+        {
+            "id":5,
+            "name":"CropIn",
+            "type":"B2B",
+            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
+            "tags": ["Agritech"],
+            "location": "Bangalore"
+        },
+        {
+            "id":6,
+            "name":"CropIn",
+            "type":"B2B",
+            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
+            "tags": ["Agritech"],
+            "location": "Bangalore"
+        }
+    ]
+}
