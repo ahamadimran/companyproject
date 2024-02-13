@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Navigation from '../components/Navigation'
 import { useState } from "react";
+import FileUploadSingle from '../components/FileUpload';
 
 
 //from https://www.freecodecamp.org/news/how-to-create-forms-in-react-using-react-hook-form/
@@ -42,7 +43,7 @@ export default function CompanyForm2() {
                 </h2>
             </section>
             <div class="container my-form">
-              <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <div class="field" align="left">
                         <label class="label" >Name</label>
                         <div class="control">
@@ -65,10 +66,28 @@ export default function CompanyForm2() {
 
                     <div class="field" align="left">
                         <label class="label" >Logo</label>
-                        <input class="input is-success"
-                            placeholder="e.g. Hello world"
-                            {...register("logo")}
-                        />
+
+
+                        <div class="file is-primary">
+                            <label class="file-label">
+                                <input class="file-input" type="file" name="resume" />
+                                <span class="file-cta">
+                                    <span class="file-icon">
+                                        <i class="fa fa-upload"></i>
+                                    </span>
+                                    <span class="file-label">
+                                        Choose a file…
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="field">
+
+                        <FileUploadSingle />
+
                     </div>
 
                     <div class="field" align="left">
