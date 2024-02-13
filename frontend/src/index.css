@@ -1,3 +1,7 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+@import "https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css";
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.App {
+  text-align: center;
+}
+
+.description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+
+.custom-card{
+  display:flex;
+  transition: all .2s ease-in-out;
+}
+
+
+.custom-card:hover {
+  transform: scale(1.03);
+}
+
+/* 
+.container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cell{
+  width: 33.333%;
+  word-wrap: break-word;
+} */

@@ -8,7 +8,7 @@ export default function Navigation() {
 
             <nav class="navbar  is-fixed-top" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="#">
+                    <a class="navbar-item" href="/">
                         <img src={logo} width="112" height="28" />
                     </a>
 

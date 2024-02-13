@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function CompanyCard(props) {
@@ -25,10 +26,11 @@ export default function CompanyCard(props) {
                     <span class="icon is-small">
                         <i class="fa fa-tag" aria-hidden="true"></i>
                     </span>
-                    AgriTech
+                    {props.tags.map((tag, id) => (
+                        <span> {tag} </span>
+                    ))}
                 </div>
                 <div class="column" align="right">
-
                     <span class="icon is-small">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                     </span>

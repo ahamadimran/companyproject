@@ -1,57 +1,126 @@
 {
-    "companies":[
+    "companies": [
         {
-            "id":1,
-            "name":"CropIn",
-            "type":"B2B",
-            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "id": 1,
+            "name": "CropIn",
+            "type": "B2B",
+            "logo": "https://clipground.com/images/circle-clipart-logo-1.jpg",
             "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
-            "tags": ["Agritech"],
+            "social": [
+                {
+                    "site": "sitename",
+                    "link": "site link"
+                }
+            ],
+            "tags": [
+                "Agritech",
+                "Technology",
+                "Finance"
+            ],
+            "location": "Bangalore",
+            "data": [
+                {
+                    "Basic Information": [
+                        {
+                            "Description": "Cropin's platform enables various stakeholders in the agri-ecosystem to leverage digitization and AI at scale to make decisions that increase efficiency, scale productivity, and strengthen sustainability. Cropin has worked with 250+ customers and has digitized 16 million acres of farmland, improving the livelihoods of more than 7 million farmers. It has built the world's largest and most diverse farming data insights over a decade, spearheading a global 'Ag-intelligence' movement with a knowledge of 488 crops, and 10000 crop varieties in 56 countries. With its AI/ML platform tailor-made for the agriculture ecosystem, Cropin has computed 0.2 billion acres of farmlands across the globe.",
+                            "Legal Name": "CropIn Technology Solutions Pvt Ltd",
+                            "Headquarters": "Bangalore, Karnataka, India",
+                            "Business Model": "B2B",
+                            "Founding Date": "Aug 2010",
+                            "No. of Employees": "251 to 500"
+                        }
+                    ]
+                },
+                {
+                    "Target Market": [
+                        {
+                            "Description": "Cropin’s agri intelligence platform has been deployed in 56 countries worldwide Their intelligent interconnected data platform uses cutting-edge technologies including artificial intelligence, machine learning, data science, satellite imagery, and remote sensing, to derive real-time actionable insights and help build a sustainable agri-ecosystem that can benefit farmers, farming companies, agri-input providers, food processing companies, retailers, financial service providers, governments and development agencies",
+                            "Client Segment": [
+                                "Agriculture",
+                                "Manufacturing",
+                                "FMCG",
+                                "Financial Services"
+                            ],
+                            "Target Companies": [
+                                "Large Enterprise",
+                                "Medium Enterprise"
+                            ],
+                            "Target Geography": "Global"
+                        }
+                    ]
+                },
+                {
+                    "Funding": [
+                        {
+                            "Total Funding": "$46.4M",
+                            "Investors": [
+                                {
+                                    "Name": "Chiratae Ventures",
+                                    "Link": "https://www.linkedin.com/company/chiratae-ventures/"
+                                },
+                                {
+                                    "Name": "Ventures",
+                                    "Link": "https://www.linkedin.com/company/chiratae-ventures/"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "TopIn",
+            "type": "B2B",
+            "logo": "https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
+            "tags": [
+                "Agritech"
+            ],
             "location": "Bangalore"
         },
         {
-            "id":2,
-            "name":"TopIn",
-            "type":"B2B",
-            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "id": 3,
+            "name": "CropIn",
+            "type": "B2B",
+            "logo": "https://clipground.com/images/circle-clipart-logo-1.jpg",
             "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
-            "tags": ["Agritech"],
+            "tags": [
+                "Agritech"
+            ],
             "location": "Bangalore"
         },
         {
-            "id":3,
-            "name":"CropIn",
-            "type":"B2B",
-            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "id": 4,
+            "name": "CropIn",
+            "type": "B2B",
+            "logo": "https://clipground.com/images/circle-clipart-logo-1.jpg",
             "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
-            "tags": ["Agritech"],
+            "tags": [
+                "Agritech"
+            ],
             "location": "Bangalore"
         },
         {
-            "id":4,
-            "name":"CropIn",
-            "type":"B2B",
-            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "id": 5,
+            "name": "CropIn",
+            "type": "B2B",
+            "logo": "https://clipground.com/images/circle-clipart-logo-1.jpg",
             "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
-            "tags": ["Agritech"],
+            "tags": [
+                "Agritech"
+            ],
             "location": "Bangalore"
         },
         {
-            "id":5,
-            "name":"CropIn",
-            "type":"B2B",
-            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
+            "id": 6,
+            "name": "CropIn",
+            "type": "B2B",
+            "logo": "https://clipground.com/images/circle-clipart-logo-1.jpg",
             "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
-            "tags": ["Agritech"],
-            "location": "Bangalore"
-        },
-        {
-            "id":6,
-            "name":"CropIn",
-            "type":"B2B",
-            "logo":"https://clipground.com/images/circle-clipart-logo-1.jpg",
-            "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
-            "tags": ["Agritech"],
+            "tags": [
+                "Agritech"
+            ],
             "location": "Bangalore"
         }
     ]
