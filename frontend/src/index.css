@@ -39,13 +39,6 @@ code {
   transform: scale(1.03);
 }
 
-/* 
-.container{
-  display: flex;
-  flex-wrap: wrap;
+.my-form{
+  width: 50%;
 }
-
-.cell{
-  width: 33.333%;
-  word-wrap: break-word;
-} */
