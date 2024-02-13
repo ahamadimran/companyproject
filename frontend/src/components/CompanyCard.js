@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function CompanyCard(props) {
     return (
-        <div class="box has-background-primary-light ">
+        <div class="box has-background-primary-light">
             <article class="media ">
                 <div class="media-left">
                     <figure class="image is-96x96">

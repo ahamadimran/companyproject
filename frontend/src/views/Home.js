@@ -9,13 +9,7 @@ export default function Home() {
 
             <Navigation />
             <Hero />
-
-            <Link to="/details">
-
-                <button class="button">Button</button>
-
-            </Link>
-
+            <Link to="/details"> <button class="button">Button</button></Link>
             <Companies />
 
         </div>

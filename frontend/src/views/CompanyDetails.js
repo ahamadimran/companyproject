@@ -19,46 +19,49 @@ export default function CompanyDetails(props) {
 
             {
                 company && (
-                    <div class="box">
-                        <article class="media ">
-                            <div class="media-left">
-                                <figure class="image is-96x96 ">
-                                    <img src={company.logo} alt="Logo" />
-                                </figure>
-                            </div>
 
-                            <div class="media-content">
-                                <div class="content">
-                                    <h4><a href=''>{company.name}</a></h4>
-                                    <p>
-                                        {company.description}
-                                    </p>
-                                </div>
+                    <div class="container is-widescreen ">
+                        <div class="notification has-background-success-light mt-6">
+                            <div class="box">
+                                <article class="media ">
+                                    <div class="media-left">
+                                        <figure class="image is-96x96 ">
+                                            <img src={company.logo} alt="Logo" />
+                                        </figure>
+                                    </div>
 
-                                <div class="columns is-gapless">
-                                    <div class="column">
-                                        <span class="icon is-small">
-                                            <i class="fa fa-tag" aria-hidden="true"></i>
-                                        </span>
+                                    <div class="media-content">
+                                        <div class="content">
+                                            <h4><a href=''>{company.name}</a></h4>
+                                            <p>
+                                                {company.description}
+                                            </p>
+                                        </div>
 
-                                        {/* {Object.entries(company.social).map((tag, id) => (
+                                        <div class="columns is-gapless">
+                                            <div class="column">
+                                                <span class="icon is-small">
+                                                    <i class="fa fa-tag" aria-hidden="true"></i>
+                                                </span>
+
+                                                {/* {Object.entries(company.social).map((tag, id) => (
                                             <span> {tag} </span>
                                         ))} */}
 
-                                    </div>
-                                    <div class="column">
-                                        <span class="icon is-small">
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        </span>
-                                        {company.location}
-                                    </div>
+                                            </div>
+                                            <div class="column">
+                                                <span class="icon is-small">
+                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                </span>
+                                                {company.location}
+                                            </div>
 
-                                </div>
-                            </div>
-                        </article>
-                        <hr />
+                                        </div>
+                                    </div>
+                                </article>
+                                <hr />
 
-                        {/* {company.sections.map((sect, id) => (
+                                {/* {company.sections.map((sect, id) => (
 
                             <div class="section">
                                 <div class="title" align="left">sect</div>
@@ -70,21 +73,24 @@ export default function CompanyDetails(props) {
 
 
 
-                        <div class="section">
-                            <div class="title" align="left">Revenue Stream</div>
-                            <div class="columns" align="left">
-                                <div class="columns">
-                                    <div class="column">
-                                        <button class="button is-primary is-outlined is-rounded">Advertising</button>
-                                    </div>
-                                    <div class="column">
-                                        <button class="button is-primary is-outlined is-rounded">Advertising</button>
-                                    </div>
-                                    <div class="column">
-                                        <button class="button is-primary is-outlined is-rounded">Advertising</button>
+                                <div class="section">
+                                    <div class="title" align="left">Revenue Stream</div>
+                                    <div class="columns" align="left">
+                                        <div class="columns">
+                                            <div class="column">
+                                                <button class="button is-primary is-outlined is-rounded">Advertising</button>
+                                            </div>
+                                            <div class="column">
+                                                <button class="button is-primary is-outlined is-rounded">Advertising</button>
+                                            </div>
+                                            <div class="column">
+                                                <button class="button is-primary is-outlined is-rounded">Advertising</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 

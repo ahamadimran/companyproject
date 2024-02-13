@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom'
 
 import Home from './views/Home';
-import CompanyForm from './views/CompanyForm';
+import CompanyForm2 from './views/CompanyForm2';
 import CompanyDetails from './views/CompanyDetails';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/form" element={<CompanyForm />} />
+        <Route path="/form" element={<CompanyForm2 />} />
         <Route path="/details" element={<CompanyDetails />} />
 
       </Routes>

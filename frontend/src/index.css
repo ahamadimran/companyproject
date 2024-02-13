@@ -42,3 +42,9 @@ code {
 .my-form{
   width: 50%;
 }
+
+.custom-container{
+  display: flex;
+  max-width: 900px;
+  flex-wrap: wrap;
+}
