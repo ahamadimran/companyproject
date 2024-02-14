@@ -1,5 +1,5 @@
 import React from 'react'
-import Company from './Company'
+import Company from './molecules/Company'
 
 export default function Companies() {
     return (

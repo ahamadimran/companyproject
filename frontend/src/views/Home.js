@@ -1,5 +1,4 @@
 import React from 'react'
-import Navigation from '../components/atoms/Navigation'
 import Hero from '../components/molecules/Hero'
 import Companies from '../components/Companies'
 import { Link } from 'react-router-dom'
