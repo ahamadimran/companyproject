@@ -44,6 +44,8 @@ export default function CompanyDetails(props) {
                                                     <i class="fa fa-tag" aria-hidden="true"></i>
                                                 </span>
 
+                                                {/* {company.services[0]} */}
+
                                                 {/* {Object.entries(company.social).map((tag, id) => (
                                             <span> {tag} </span>
                                         ))} */}

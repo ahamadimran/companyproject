@@ -6,11 +6,15 @@
         "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
         "social": [
             {
-                "site": "sitename",
+                "site": "Facebook",
+                "link": "site link"
+            },
+            {
+                "site": "LinkedIn",
                 "link": "site link"
             }
         ],
-        "tags": [
+        "services": [
             "Agritech",
             "Technology",
             "Finance"
@@ -44,23 +48,6 @@
                             "Medium Enterprise"
                         ],
                         "Target Geography": "Global"
-                    }
-                ]
-            },
-            {
-                "Funding": [
-                    {
-                        "Total Funding": "$46.4M",
-                        "Investors": [
-                            {
-                                "Name": "Chiratae Ventures",
-                                "Link": "https://www.linkedin.com/company/chiratae-ventures/"
-                            },
-                            {
-                                "Name": "Ventures",
-                                "Link": "https://www.linkedin.com/company/chiratae-ventures/"
-                            }
-                        ]
                     }
                 ]
             }

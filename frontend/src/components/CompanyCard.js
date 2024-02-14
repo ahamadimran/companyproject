@@ -8,14 +8,15 @@ export default function CompanyCard(props) {
             <article class="media ">
                 <div class="media-left">
                     <figure class="image is-96x96">
+                        {/* Add default image */}
                         <img src={props.logo} alt="Logo" />
                     </figure>
                 </div>
                 <div class="media-content">
                     <div class="content">
-                        <h4>{props.name}</h4>
+                        <h4>{props.name ? props.name : "No Name" }</h4>
                         <p class="description">
-                            {props.description}
+                            {props.description ? props.description : "No Description"}
                         </p>
                     </div>
                 </div>
@@ -34,7 +35,7 @@ export default function CompanyCard(props) {
                     <span class="icon is-small">
                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                     </span>
-                    {props.location}
+                    {props.location ? props.location : "No Location"}
                 </div>
             </div>
 

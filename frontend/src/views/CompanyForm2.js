@@ -19,12 +19,17 @@ export default function CompanyForm2() {
 
 
     const onSubmit = async (data) => {
-        console.log(data);
+        console.log(JSON.stringify(data));
+
         try {
 
             let res = await fetch("http://localhost:5000/api/company/create/", {
                 method: "POST",
                 body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                  }, 
             });
 
 
