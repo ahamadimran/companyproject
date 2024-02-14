@@ -1,0 +1,55 @@
+{
+    "name": "CropIn",
+    "type": "B2B",
+    "logo": "https://clipground.com/images/circle-clipart-logo-1.jpg",
+    "description": "Founded in 2010, Cropin is a pioneer in the Agtech space, building the first global Intelligent Agriculture Cloud.",
+    "services": [
+        "Agritech",
+        "Technology",
+        "Finance"
+    ],
+    "social": [
+        {
+            "site": "Facebook",
+            "link": "site link"
+        },
+        {
+            "site": "LinkedIn",
+            "link": "site link"
+        }
+    ],
+
+    "location": "Bangalore",
+    "sections": [
+        {
+            "basic_information": [
+                {
+                    "description": "Cropin's platform enables various stakeholders in the agri-ecosystem to leverage digitization and AI at scale to make decisions that increase efficiency, scale productivity, and strengthen sustainability. Cropin has worked with 250+ customers and has digitized 16 million acres of farmland, improving the livelihoods of more than 7 million farmers. It has built the world's largest and most diverse farming data insights over a decade, spearheading a global 'Ag-intelligence' movement with a knowledge of 488 crops, and 10000 crop varieties in 56 countries. With its AI/ML platform tailor-made for the agriculture ecosystem, Cropin has computed 0.2 billion acres of farmlands across the globe.",
+                    "legal_name": "CropIn Technology Solutions Pvt Ltd",
+                    "headquarters": "Bangalore, Karnataka, India",
+                    "business_model": "B2B",
+                    "founding_date": "Aug 2010",
+                    "employees": "251 to 500"
+                }
+            ]
+        },
+        {
+            "target_market": [
+                {
+                    "description": "Cropin’s agri intelligence platform has been deployed in 56 countries worldwide Their intelligent interconnected data platform uses cutting-edge technologies including artificial intelligence, machine learning, data science, satellite imagery, and remote sensing, to derive real-time actionable insights and help build a sustainable agri-ecosystem that can benefit farmers, farming companies, agri-input providers, food processing companies, retailers, financial service providers, governments and development agencies",
+                    "client_segment": [
+                        "Agriculture",
+                        "Manufacturing",
+                        "FMCG",
+                        "Financial Services"
+                    ],
+                    "target_companies": [
+                        "Large Enterprise",
+                        "Medium Enterprise"
+                    ],
+                    "target_geography": "Global"
+                }
+            ]
+        }
+    ]
+}

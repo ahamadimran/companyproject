@@ -7,19 +7,13 @@ export default function CompanyDetails(props) {
 
     useEffect(() => {
         axios.get("/cropin.json").then((res) => {
-            setCompany(res.data.Company);
-            console.log(res.data);
-            console.log("$$$$$");
-            console.log("This is data" + company);
-
+            setCompany(res.data);
         });
     }, []);
     return (
         <div>
-
             {
                 company && (
-
                     <div class="container is-widescreen ">
                         <div class="notification has-background-success-light mt-6">
                             <div class="box">
@@ -35,6 +29,12 @@ export default function CompanyDetails(props) {
                                             <h4><a href=''>{company.name}</a></h4>
                                             <p>
                                                 {company.description}
+
+                                                {
+                                                    company.services.map((service)=>(
+                                                        service
+                                                    ))
+                                                }
                                             </p>
                                         </div>
 
@@ -43,13 +43,6 @@ export default function CompanyDetails(props) {
                                                 <span class="icon is-small">
                                                     <i class="fa fa-tag" aria-hidden="true"></i>
                                                 </span>
-
-                                                {/* {company.services[0]} */}
-
-                                                {/* {Object.entries(company.social).map((tag, id) => (
-                                            <span> {tag} </span>
-                                        ))} */}
-
                                             </div>
                                             <div class="column">
                                                 <span class="icon is-small">
@@ -95,13 +88,8 @@ export default function CompanyDetails(props) {
 
                         </div>
                     </div>
-
                 )
             }
-
-
         </div>
-
-
     )
 }
