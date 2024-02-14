@@ -17,7 +17,7 @@ const Company = () => {
             <div class="columns container grid custom-container">
                 {companies &&
                     companies.map((company, id) => (
-                        <div class="column  is-one-third custom-card cell" >
+                        <div class="column  is-one-third custom-card" >
                             <CompanyCard {...company} />
                         </div>
                     ))}
