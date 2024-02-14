@@ -1,11 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import Navigation from '../components/Navigation'
 import { useState } from "react";
-import axios from "axios";
-
-import FileUploadSingle from '../components/FileUpload';
-
 
 //from https://www.freecodecamp.org/news/how-to-create-forms-in-react-using-react-hook-form/
 
@@ -52,7 +47,6 @@ export default function CompanyForm2() {
     };
     return (
         <div>
-            <Navigation />
             <section class="section is-medium">
                 <h1 class="title">Enlist Your Company</h1>
                 <h2 class="subtitle">

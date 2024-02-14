@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CompanyCard from "./CompanyCard";
+import CompanyCard from "./atoms/CompanyCard";
 
 
 const Company = () => {

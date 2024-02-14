@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Search from '../atoms/Search'
 
 export default function Hero() {
     return (
@@ -14,13 +15,8 @@ export default function Hero() {
                         A List of Companies Curated By YourCompany Club.
                     </p>
 
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input is-large" type="text" placeholder="Search Companies" />
-                        <span class="icon is-medium is-left">
-                            <i class="fa fa-search"></i>
-                        </span>
-                    </div>
-
+                    <Search/>
+                    
                     <Link to="/form">
                     <button class="button is-large is-primary mt-6" >
                         <span class="icon is-medium">
