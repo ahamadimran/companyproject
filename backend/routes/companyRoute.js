@@ -10,6 +10,7 @@ route.get("/fetch/:id", fetchById);
 route.put("/update/:id", update);
 route.delete("/delete/:id", deleteCompany);
 route.post("/search", searchCompany);
+route.get("/uploads/")
 // route.post("/fileupload", uploadMiddleware.single("myfile"), uploadFile);
 
 

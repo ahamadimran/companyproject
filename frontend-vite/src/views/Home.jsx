@@ -6,7 +6,6 @@ export default function Home() {
     return (
         <div>
             <Hero />
-            <Link to="/details"> <button className="button">Button</button></Link>
             <Companies />
         </div>
     )

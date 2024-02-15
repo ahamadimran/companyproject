@@ -2,13 +2,15 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+const URL = "http://localhost:5000";
+
 export default function CompanyDetails() {
 
     const [company, setCompany] = useState([]);
-    const {id} = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
-        axios.get("http://localhost:5000/api/company/fetch/" + id).then((res) => {
+        axios.get(URL + "/api/company/fetch/" + id).then((res) => {
             console.log(res.data);
             setCompany(res.data);
         });
@@ -26,7 +28,7 @@ export default function CompanyDetails() {
                                 <article className="media ">
                                     <div className="media-left">
                                         <figure className="image is-96x96 ">
-                                            <img src={company.logo} alt="Logo" />
+                                            <img src={URL + "/api/company/uploads/" + company.fileName} alt="Logo" />
                                         </figure>
                                     </div>
 
@@ -35,12 +37,6 @@ export default function CompanyDetails() {
                                             <h4><a href=''>{company.name}</a></h4>
                                             <p>
                                                 {company.description}
-
-                                                {/* {
-                                                    company.services.map((service)=>(
-                                                        service
-                                                    ))
-                                                } */}
                                             </p>
                                         </div>
 
@@ -49,6 +45,10 @@ export default function CompanyDetails() {
                                                 <span className="icon is-small">
                                                     <i className="fa fa-tag" aria-hidden="true"></i>
                                                 </span>
+
+                                                
+                                    
+
                                             </div>
                                             <div className="column">
                                                 <span className="icon is-small">
@@ -61,19 +61,6 @@ export default function CompanyDetails() {
                                     </div>
                                 </article>
                                 <hr />
-
-                                {/* {company.sections.map((sect, id) => (
-
-                            <div className="section">
-                                <div className="title" align="left">sect</div>
-                                <p></p>
-                                <hr />
-                            </div>
-
-                        ))} */}
-
-
-
                                 <div className="section">
                                     <div className="title" align="left">Revenue Stream</div>
                                     <div className="columns" align="left">
