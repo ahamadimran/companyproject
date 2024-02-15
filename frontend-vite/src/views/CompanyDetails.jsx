@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import logo from '../assets/logo.png';
+
 
 const URL = "http://localhost:5000";
 
@@ -28,15 +30,14 @@ export default function CompanyDetails() {
                                 <article className="media ">
                                     <div className="media-left">
                                         <figure className="image is-96x96 ">
-                                            <img src={URL + "/api/company/file/" + company.filePath} alt="Logo" />
+                                            <img src={company.fileName ? URL + "/logos/" + company.fileName : logo} alt="Logo" />
 
-                                            {console.log(URL + "/api/company/file/" + company.filePath)}
                                         </figure>
                                     </div>
 
                                     <div className="media-content">
                                         <div className="content">
-                                            <h4><a href=''>{company.name}</a></h4>
+                                            <h4><a href={company.website}>{company.name}</a></h4>
                                             <p>
                                                 {company.description}
                                             </p>
@@ -48,7 +49,11 @@ export default function CompanyDetails() {
                                                     <i className="fa fa-tag" aria-hidden="true"></i>
                                                 </span>
 
+                                                {company.services}
 
+                                                {/* .map((tag, id) => (
+                                                    <span key={id}> {tag} </span>
+                                                ))} */}
 
 
                                             </div>
