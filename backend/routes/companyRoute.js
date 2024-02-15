@@ -10,7 +10,14 @@ route.get("/fetch/:id", fetchById);
 route.put("/update/:id", update);
 route.delete("/delete/:id", deleteCompany);
 route.post("/search", searchCompany);
-route.get("/uploads/")
+
+route.get('/file/:fp', function (req, res) {
+    const filePath = req.params.fp;
+
+    console.log(filePath);
+    // find out the filePath based on given fileName
+    res.sendFile("/" + filePath);
+});
 // route.post("/fileupload", uploadMiddleware.single("myfile"), uploadFile);
 
 

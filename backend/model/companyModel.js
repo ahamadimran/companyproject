@@ -29,6 +29,11 @@ const companySchema = new mongoose.Schema({
         require: true,
     },
 
+    fdescription: {
+        type: String,
+        require: true,
+    },
+
     // socialicon : {
     //     type: String,
     // },

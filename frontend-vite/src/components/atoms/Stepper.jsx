@@ -80,7 +80,7 @@ function Stepper({ children, style, onEnd, buttonTemplate }) {
 
 export function Step({ children, title }) {
   return (
-    <div>
+    <div style={{ marginTop: 50 }}>      
       {children}
     </div>
   )

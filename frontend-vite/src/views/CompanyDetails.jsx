@@ -28,7 +28,9 @@ export default function CompanyDetails() {
                                 <article className="media ">
                                     <div className="media-left">
                                         <figure className="image is-96x96 ">
-                                            <img src={URL + "/api/company/uploads/" + company.fileName} alt="Logo" />
+                                            <img src={URL + "/api/company/file/" + company.filePath} alt="Logo" />
+
+                                            {console.log(URL + "/api/company/file/" + company.filePath)}
                                         </figure>
                                     </div>
 
@@ -46,8 +48,8 @@ export default function CompanyDetails() {
                                                     <i className="fa fa-tag" aria-hidden="true"></i>
                                                 </span>
 
-                                                
-                                    
+
+
 
                                             </div>
                                             <div className="column">
