@@ -1,52 +1,58 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-export default function CompanyDetails(props) {
+export default function CompanyDetails() {
 
     const [company, setCompany] = useState([]);
+    const {id} = useParams();
 
     useEffect(() => {
-        axios.get("/cropin.json").then((res) => {
+        axios.get("http://localhost:5000/api/company/fetch/" + id).then((res) => {
+            console.log(res.data);
             setCompany(res.data);
         });
     }, []);
+
+
+
     return (
         <div>
             {
                 company && (
-                    <div class="container is-widescreen ">
-                        <div class="notification has-background-success-light mt-6">
-                            <div class="box">
-                                <article class="media ">
-                                    <div class="media-left">
-                                        <figure class="image is-96x96 ">
+                    <div className="container is-widescreen ">
+                        <div className="notification has-background-success-light mt-6">
+                            <div className="box">
+                                <article className="media ">
+                                    <div className="media-left">
+                                        <figure className="image is-96x96 ">
                                             <img src={company.logo} alt="Logo" />
                                         </figure>
                                     </div>
 
-                                    <div class="media-content">
-                                        <div class="content">
+                                    <div className="media-content">
+                                        <div className="content">
                                             <h4><a href=''>{company.name}</a></h4>
                                             <p>
                                                 {company.description}
 
-                                                {
+                                                {/* {
                                                     company.services.map((service)=>(
                                                         service
                                                     ))
-                                                }
+                                                } */}
                                             </p>
                                         </div>
 
-                                        <div class="columns is-gapless">
-                                            <div class="column">
-                                                <span class="icon is-small">
-                                                    <i class="fa fa-tag" aria-hidden="true"></i>
+                                        <div className="columns is-gapless">
+                                            <div className="column">
+                                                <span className="icon is-small">
+                                                    <i className="fa fa-tag" aria-hidden="true"></i>
                                                 </span>
                                             </div>
-                                            <div class="column">
-                                                <span class="icon is-small">
-                                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <div className="column">
+                                                <span className="icon is-small">
+                                                    <i className="fa fa-map-marker" aria-hidden="true"></i>
                                                 </span>
                                                 {company.location}
                                             </div>
@@ -58,8 +64,8 @@ export default function CompanyDetails(props) {
 
                                 {/* {company.sections.map((sect, id) => (
 
-                            <div class="section">
-                                <div class="title" align="left">sect</div>
+                            <div className="section">
+                                <div className="title" align="left">sect</div>
                                 <p></p>
                                 <hr />
                             </div>
@@ -68,18 +74,18 @@ export default function CompanyDetails(props) {
 
 
 
-                                <div class="section">
-                                    <div class="title" align="left">Revenue Stream</div>
-                                    <div class="columns" align="left">
-                                        <div class="columns">
-                                            <div class="column">
-                                                <button class="button is-primary is-outlined is-rounded">Advertising</button>
+                                <div className="section">
+                                    <div className="title" align="left">Revenue Stream</div>
+                                    <div className="columns" align="left">
+                                        <div className="columns">
+                                            <div className="column">
+                                                <button className="button is-primary is-outlined is-rounded">Advertising</button>
                                             </div>
-                                            <div class="column">
-                                                <button class="button is-primary is-outlined is-rounded">Advertising</button>
+                                            <div className="column">
+                                                <button className="button is-primary is-outlined is-rounded">Advertising</button>
                                             </div>
-                                            <div class="column">
-                                                <button class="button is-primary is-outlined is-rounded">Advertising</button>
+                                            <div className="column">
+                                                <button className="button is-primary is-outlined is-rounded">Advertising</button>
                                             </div>
                                         </div>
                                     </div>

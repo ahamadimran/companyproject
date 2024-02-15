@@ -4,10 +4,10 @@ import Company from './molecules/Company'
 export default function Companies() {
     return (
         <div>
-            <div class="container is-widescreen ">
-                <div class="notification has-background-success-light mt-6">
-                    <section class="section">
-                        <h1 class="title">Featured</h1>
+            <div className="container is-widescreen ">
+                <div className="notification has-background-success-light mt-6">
+                    <section className="section">
+                        <h1 className="title">Featured</h1>
                         <Company />
                     </section>
                 </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import Stepper, { Step } from '../components/atoms/Stepper'
 
 //from https://www.freecodecamp.org/news/how-to-create-forms-in-react-using-react-hook-form/
 
@@ -23,8 +24,7 @@ export default function CompanyForm2() {
                 body: JSON.stringify(data),
                 headers: {
                     "Content-Type": "application/json",
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                  }, 
+                },
             });
 
 
@@ -45,98 +45,119 @@ export default function CompanyForm2() {
             console.log(err);
         }
     };
+
+    const buttonTemplate = (e) => e.isEnd && <button className="button is-primary" type="submit">Create</button>
+
+
+
     return (
-        <div>
-            <section class="section is-medium">
-                <h1 class="title">Enlist Your Company</h1>
-                <h2 class="subtitle">
+
+        <div style={{ padding: 70 }}>
+            <section className="section is-small">
+                <h1 className="title">Enlist Your Company</h1>
+                <h2 className="subtitle">
                     Provide your company's information below.
                 </h2>
             </section>
-            <div class="container my-form">
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <div class="field" align="left">
-                        <label class="label" >Name</label>
-                        <div class="control">
-                            <input class="input is-success"
-                                type="text"
-                                name="name"
-                                placeholder="Name"
-                                {...register("name")}
-                            />
-                        </div>
-                    </div>
-
-                    <div class="field" align="left">
-                        <label class="label" >Description</label>
-                        <textarea class="textarea is-success"
-                        name="description"
-                            placeholder="e.g. Hello world"
-                            {...register("description")}
-                        ></textarea>
-                    </div>
 
 
-                    <div class="field" align="left">
-                        <label class="label" >Logo</label>
+            <form onSubmit={handleSubmit(onSubmit)}>
 
-
-                        <div class="file is-primary">
-                            <label class="file-label">
-
-                                {/* <input class="file-input" type="file" name="logo" /> */}
-
-                                <input class="input is-success"
+                <Stepper buttonTemplate={buttonTemplate}>
+                    <Step title={"Self Introduction"}>
+                        <div className="field" align="left" style={{ marginTop: 50 }}>
+                            <label className="label" >Name</label>
+                            <div className="control">
+                                <input className="input is-success"
                                     type="text"
-                                    name="logo"
-                                    placeholder="Logo"
-                                    {...register("logo")}
+                                    name="name"
+                                    placeholder="Name"
+                                    {...register("name")}
                                 />
+                            </div>
+                        </div>
 
-                                <span class="file-cta">
-                                    <span class="file-icon">
-                                        <i class="fa fa-upload"></i>
-                                    </span>
-                                    <span class="file-label">
-                                        Choose a file…
-                                    </span>
+                        <div className="field" align="left">
+                            <label className="label" >Description</label>
+                            <textarea className="textarea is-success"
+                                name="description"
+                                placeholder="e.g. Hello world"
+                                {...register("description")}
+                            ></textarea>
+                        </div>
+
+
+
+                    </Step>
+
+                    <Step title={"Basic Information"}>
+
+                        <div className="field" align="left" style={{ marginTop: 50 }}>
+                            <label className="label">Location</label>
+                            <div className="control has-icons-left">
+                                <input className="input is-success"
+                                    type="text"
+                                    name="location"
+                                    placeholder="Street, City, State"
+                                    {...register("location")}
+                                />
+                                <span className="icon is-small is-left">
+                                    <i className="fa fa-map-marker"></i>
                                 </span>
-                            </label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="field" align="left">
-                        <label class="label">Location</label>
-                        <div class="control has-icons-left">
-                            <input class="input is-success"
-                                type="text"
-                                name="location"
-                                placeholder="Street, City, State"
-                                {...register("location")}
-                            />
-                            <span class="icon is-small is-left">
-                                <i class="fa fa-map-marker"></i>
-                            </span>
+
+                        <div className="field" align="left">
+                            <label className="label">Category</label>
+                            <div className="control has-icons-left">
+                                <input className="input is-success"
+                                    type="text"
+                                    name="category"
+                                    placeholder="Software"
+                                    {...register("category")}
+                                />
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="field" align="left">
-                        <label class="label">Category</label>
-                        <div class="control has-icons-left">
-                            <input class="input is-success"
-                                type="text"
-                                name="category"
-                                placeholder="Software"
-                                {...register("category")}
-                            />
-                        </div>
-                    </div>
-
-                    <button class="button is-primary" type="submit">Create</button>
-                    <div className="message mt-6">{message ? <p>{message}</p> : null}</div>
-                </form>
-            </div>
-
+                    </Step>
+                </Stepper>
+            </form>
         </div>
+
+
+
+
     );
+
 }
+
+
+
+{/* <Step title={"Basic Information"}>
+
+<div className="field" align="left">
+    <label className="label" >Logo</label>
+
+
+    <div className="file is-primary">
+        <label className="file-label">
+             <input className="file-input" type="file" name="logo" /> 
+            <input className="input is-success"
+                type="text"
+                name="logo"
+                placeholder="Logo"
+                {...register("logo")}
+            />
+            <span className="file-cta">
+                <span className="file-icon">
+                    <i className="fa fa-upload"></i>
+                </span>
+                <span className="file-label">
+                    Choose a file…
+                </span>
+            </span>
+        </label>
+    </div>
+</div>
+</Step> */}

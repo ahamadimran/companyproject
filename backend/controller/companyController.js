@@ -1,5 +1,6 @@
 import { application } from "express";
 import company from "../model/companyModel.js";
+import { Error } from "mongoose";
 
 
 export const create = async(req, res) => {
@@ -23,7 +24,6 @@ export const create = async(req, res) => {
     }
 }
 
-
 export const fetch = async(req, res) => {
     try {
         const companies = await company.find();
@@ -34,6 +34,23 @@ export const fetch = async(req, res) => {
 
     } catch (error) {
         res.status(500).json({error: "Internal Server Error"});
+    }
+}
+
+export const fetchById = async(req, res) => {
+
+    try {
+        if(!req.params.id)
+            throw {statusCode: 403, msg: "ID is requried"}
+
+        const companies = await company.findOne({_id : req.params.id});
+        if(!companies) 
+            throw {statusCode: 404, msg: "Data Not found!"}
+
+        res.status(200).json(companies);
+    } catch (error) {
+        // console.log(error)
+        res.status(error.statusCode || 500).json({error: error.msg || "Internal Server Error"});
     }
 }
 
@@ -53,7 +70,6 @@ export const update = async(req, res) => {
     }
 }
 
-
 export const deleteCompany = async(req, res) => {
     try {
         const id = req.params.id;
@@ -69,7 +85,6 @@ export const deleteCompany = async(req, res) => {
         res.status(500).json({error: "Internal Server Error"});
     }
 }
-
 
 export const searchCompany = async(req, res) => {
     try {
