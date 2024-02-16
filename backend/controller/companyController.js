@@ -5,9 +5,9 @@ import { Error } from "mongoose";
 
 export const create = async(req, res) => {
     try {
-        // req.body.fileName = req.file.filename;
-        // req.body.filePath = req.file.path;
-        // req.body.fileSize = req.file.size;
+        req.body.fileName = req.file.filename;
+        req.body.filePath = req.file.path;
+        req.body.fileSize = req.file.size;
         
         const companyData = new company(req.body);
         const {name} = companyData;
@@ -20,6 +20,7 @@ export const create = async(req, res) => {
         res.status(200).json(saveCompany);
 
     } catch (error) {
+        console.log("Bawa", error)
         res.status(500).json({error: "Internal Server Error"});
     }
 }

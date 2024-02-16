@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import "./Stepper.css"
 
-function Stepper({ children, style, onEnd, buttonTemplate}) {
+function Stepper({ children, style, onEnd, buttonTemplate }) {
   if (children?.type?.name === "Step")
     children = [children]
   else if (!children?.some || children.some(val => val.type.name !== "Step"))
@@ -64,16 +64,15 @@ function Stepper({ children, style, onEnd, buttonTemplate}) {
           </div>
         </div>
       </div>
-      <div className="step-child">
+      <div key={step} className="step-child">
         {children[step]}
       </div>
       <div className="step-controls">
-        <button className="step-btn" disabled={step === 0} onClick={() => setStep(prev => --prev)} >Prev</button>
+        <button className="step-btn" type="button" disabled={step === 0} onClick={() => setStep(prev => --prev)} >Prev</button>
         {
-          buttonTemplate &&  buttonTemplate({isEnd: step === children.length - 1}) ||
-          <button className="step-btn" disabled={step === children.length - 1} onClick={() => setStep(prev => ++prev)}>Next</button>
+          buttonTemplate && buttonTemplate({ isEnd: step === children.length - 1 }) ||
+          <button key={step} className="step-btn" type="button" disabled={step === children.length - 1} onClick={() => setStep(prev => ++prev)}>Next</button>
         }
-        
       </div>
     </div>
   )
@@ -81,7 +80,7 @@ function Stepper({ children, style, onEnd, buttonTemplate}) {
 
 export function Step({ children, title }) {
   return (
-    <div>
+    <div style={{ marginTop: 50 }}>      
       {children}
     </div>
   )

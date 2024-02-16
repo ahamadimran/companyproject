@@ -29,7 +29,6 @@ code {
 }
 
 .custom-card{
-  display:flex;
   transition: all .2s ease-in-out;
 }
 

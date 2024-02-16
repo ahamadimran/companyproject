@@ -3,7 +3,7 @@ import fs from "fs";
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const directory = "./uploads";
+        const directory = "./public/logos";
         if(!fs.existsSync(directory)) {
             fs.mkdirSync(directory);
         }

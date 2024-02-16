@@ -4,9 +4,12 @@ import App from './App.jsx'
 import './index.css'
 
 import { BrowserRouter } from "react-router-dom";
+import ToastContainer from './components/atoms/Toast.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <App />
+    <ToastContainer>
+      <App />
+    </ToastContainer>
   </BrowserRouter>
 )

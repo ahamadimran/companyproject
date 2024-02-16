@@ -1,16 +1,23 @@
 import React from 'react';
-import Card from './Card';
 import CompanyCard from '../CompanyCard';
+import { useNavigate } from "react-router-dom";
 
-function SearchList({ filteredPersons }) {
+function SearchList({ filteredCompany }) {
 
-  const filtered = filteredPersons.map((company, id) => (
-    <div key={id} className="column  is-one-third custom-card m-1">
+  const navigate = useNavigate()
+
+
+  const filtered = filteredCompany.map((company, id) => (
+
+    <div key={id} 
+    className="column custom-card"
+    onClick={() => { navigate("/details/" + company._id)}}
+    >
       <CompanyCard {...company} />
     </div>
   ));
   return (
-    <div className="columns container grid custom-container">
+    <div className="columns container custom-container">
       {filtered}
     </div>
   );
