@@ -54,7 +54,7 @@ export default function Search({ details }) {
       return (
         <div className='container is-widescreen'>
 
-<SearchList filteredCompany={searchResults} />
+          <SearchList filteredCompany={searchResults} />
 
 
         </div>

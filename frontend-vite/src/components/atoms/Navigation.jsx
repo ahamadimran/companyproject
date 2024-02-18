@@ -1,6 +1,10 @@
 
 import React from 'react'
 import logo from '../../assets/logo.png';
+import menu from '../../data/menu';
+import Menu from './Menu';
+
+
 
 export default function Navigation() {
     return (
@@ -9,7 +13,7 @@ export default function Navigation() {
                 <div className="navbar-brand">
                     <a className="navbar-item" href="/">
                         <img src={logo} width="112" height="28" />
-                    </a>
+                    </a>    
 
                     <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
@@ -18,38 +22,12 @@ export default function Navigation() {
                     </a>
                 </div>
 
-                <div id="navbarBasicExample" className="navbar-menu">
-                    <div className="navbar-start">
-                        <a className="navbar-item">
-                            Home
-                        </a>
+                <div className="navbar-menu">
+                    <Menu menu={menu}/>
+                </div>
 
-                        <a className="navbar-item">
-                            Contact
-                        </a>
-
-                        <div className="navbar-item has-dropdown is-hoverable">
-                            <a className="navbar-link">
-                                More
-                            </a>
-
-                            <div className="navbar-dropdown">
-                                <a className="navbar-item">
-                                    About
-                                </a>
-                                <a className="navbar-item">
-                                    Jobs
-                                </a>
-                                <a className="navbar-item">
-                                    Contact
-                                </a>
-                                <hr className="navbar-divider" />
-                                <a className="navbar-item">
-                                    Report an issue
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div className="navbar-menu">
+                    
 
                     <div className="navbar-end">
                         <div className="navbar-item">
@@ -63,7 +41,6 @@ export default function Navigation() {
                     </div>
                 </div>
             </nav>
-
         </div>
     )
 }
